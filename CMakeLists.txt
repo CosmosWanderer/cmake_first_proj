@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.10)
+set(PROJECT_NAME add)
+project(${PROJECT_NAME})
+include_directories("${CMAKE_SOURCE_DIR}/includes")
+add_library(add_lib "includes/add.h" "src/add.cpp")
+add_executable(add_exe "src/main.cpp")
+target_link_libraries(add_exe add_lib)
+message(STATUS "Done")
